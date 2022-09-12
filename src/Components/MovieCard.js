@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 function MovieCard({movie}) {
   return (
@@ -13,7 +14,7 @@ function MovieCard({movie}) {
         <Card.Text>
           {"🌟".repeat(movie.rate)}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Link to={`/Trailer/${movie.id}`}><Button variant="primary">Go Details</Button></Link>
       </Card.Body>
     </Card>
   );
